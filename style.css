@@ -59,7 +59,8 @@ body {
 
 /* About Section */
 .about-us{
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
+  margin-bottom: 3rem;
   text-align: left;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -79,7 +80,7 @@ body {
 .track{
   width: max-content;
   display: flex;
-  animation: scroll 10s linear infinite;
+  animation: scroll 18s linear infinite;
 }
 .testimonials:hover .track {
   animation-play-state: paused; 
@@ -87,23 +88,28 @@ body {
 
 .testimonial-card{
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  flex-shrink: 0;
+  padding: 0.8rem;
   width: 20rem;
   margin: 1rem;
   text-align: left;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.testimonial-card .stars,
 .testimonial-card p{
-  border: 1px solid purple;
   margin: 0;
+  margin-top: 0.5rem;
+}
+.testimonial-card .stars{
+  margin-bottom: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 
-/* UNCOMMENT LATER
+
+/* UNCOMMENT LATER*/
 @keyframes scroll {
   0% {
     transform: translateX(0);
