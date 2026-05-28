@@ -1,10 +1,51 @@
-/* Base Styles */
+/* Variables & Base Styles */
+html{ 
+  --background-main: white;
+  --background-accent-1: grey;
+  --background-accent-2: darkgrey;
+  --background-accent-3: lightgrey;
+
+  --text-color-main: black;
+  --text-color-accent-1: grey;
+  --text-color-accent-2: darkgrey;
+
+  --font-title: Petemoss;
+  --font-body: Lora;
+}
+
 body {
-  color: black;
+  color: var(--text-color-main);
+  background-color: var(--background-main);
   text-align: center;
+  font-family: var(--font-body);
 }
 
 /* Typography, Links, & Accents */
+.title{
+  font-family: var(--font-title);
+  font-size: 10rem;
+  margin: 0;
+  line-height: 7.5rem;
+}
+.tagline{
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+h2{
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 1.4rem;
+  font-weight: 450;
+}
+
+p{
+  font-size: 1.15rem;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -29,6 +70,36 @@ body {
 /**** Header Section ****/
 
 /* Navbar Section (2) */
+nav{
+  box-sizing: border-box;
+  background-color: var(--background-accent-3);
+  padding: 0.5rem;
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 5;
+
+  display: flex;
+  justify-content: end;
+}
+nav a{
+  font-size: 1.4rem;
+  font-family: var(--font-body);
+  color: var(--text-color-main);
+  text-decoration: none;
+  margin: 0.5rem;
+  margin-right: 1.5rem;
+}
+nav a:hover{
+  color: var(--text-color-accent-1);
+}
+/* Title Section */
+.header-content{
+  background-image: linear-gradient(rgba(223, 223, 223, 0.5), rgba(223, 223, 223, 0.5)), url("./img/floral-pattern.avif");
+  padding: 6rem 2rem 2rem 2rem;
+  margin-bottom: 1.8rem;
+}
 
 /**** Main Content ****/
 
@@ -128,40 +199,31 @@ body {
 
 /* Seasonal Picks Section (3) */
 .seasonal-picks{
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 80rem;
-  height: 30rem;
-  display: grid;
-  grid-template-columns: 1fr 25rem;
-  gap: 4%;
+  padding: 2rem 2rem;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
-
 .seasonal-content{
   text-align: right;
+  margin-right: max(2rem, 5%);
   display: flex;
   flex-direction: column;
-  margin-top: 20%;
-}
-.seasonal-content h2{
-  border: 1px solid purple;
-}
-.seasonal-content p{
-  border: 1px solid purple;
-}
-.seasonal-content aside{
-  border: 1px solid purple;
+  width: 40%;
 }
 
 .img-container img{
   width: 100%;
+  margin-top: -20%;
 }
 .seasonal-picks .img-container{
   overflow: hidden;
-  display: flex;
-  align-items: end;
+  width: 50%;
+  min-width: 275px;
 }
 
 
