@@ -70,17 +70,19 @@ body {
   color: black;
   margin-bottom: 1.2rem;
 }
+
 /* Testimonials Section (2) */
 .testimonials{
   background-color: lightgray;
   width: 100%;
   overflow: hidden;
+  margin: 4rem 0;
 }
 
 .track{
   width: max-content;
   display: flex;
-  animation: scroll 18s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 .testimonials:hover .track {
   animation-play-state: paused; 
@@ -106,10 +108,7 @@ body {
   margin-bottom: 0.5rem;
   margin-top: 0.8rem;
 }
-
-
-
-/* UNCOMMENT LATER*/
+/* UNCOMMENT LATER
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -119,7 +118,44 @@ body {
   }
 }
 */
+
 /* Seasonal Picks Section (3) */
+.seasonal-picks{
+  border: 1px solid pink;
+  margin: 2rem auto;
+  max-width: 80rem;
+  height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  gap: 4%;
+  overflow: hidden;
+}
+
+.seasonal-content{
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+.seasonal-content h2{
+  border: 1px solid purple;
+}
+.seasonal-content p{
+  border: 1px solid purple;
+}
+.seasonal-content aside{
+  border: 1px solid purple;
+}
+
+.img-container img{
+  width: 100%;
+}
+.seasonal-picks .img-container{
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+}
+
 
 /* Specials Section */
 
