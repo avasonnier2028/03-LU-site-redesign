@@ -1,13 +1,14 @@
 /* Variables & Base Styles */
 html{ 
-  --background-main: rgb(244, 241, 241);
-  --background-accent-1: grey;
-  --background-accent-2: darkgrey;
-  --background-accent-3: lightgrey;
+  --off-white: rgb(245, 242, 240);
+  --background-main: #F3E9E2;
+  --background-accent-1: #CE796B;
+  --background-accent-2: #E7AD99;
+  --background-accent-3: #ECC8AF;
 
-  --text-color-main: black;
-  --text-color-accent-1: grey;
-  --text-color-accent-2: darkgrey;
+  --text-color-main: #1E152A;
+  --text-color-accent-1: #5D4954;
+  --text-color-accent-2: #CE796B;
 
   --font-title: Petemoss;
   --font-body: Lora;
@@ -69,7 +70,7 @@ p{
 }
 
 .line-break{
-  background-color: lightgrey;
+  background-color: var(--background-accent-3);
   height: 1px;
   width: 95vw;
   margin: 5rem auto;
@@ -112,7 +113,7 @@ nav a:hover{
 
 /* Title Section */
 .header-content{
-  background-image: linear-gradient(rgba(223, 223, 223, 0.5), rgba(223, 223, 223, 0.5)), url("./img/floral-pattern.avif");
+  background-image: linear-gradient(rgba(236, 200, 175, 0.5), rgba(236, 200, 175, 0.5)), url("./img/floral-pattern.avif");
   padding: 4rem 2rem 2rem 2rem;
   
 }
@@ -141,14 +142,14 @@ nav a:hover{
   width: 5.5%;
   border-radius: 50%;
   position: absolute;
-  background-color: grey;
+  background-color: var(--background-accent-1);
   box-shadow: inset 0.2rem 0.15rem 0.2rem rgba(234, 232, 232, 0.5),
                     0.6rem 0.4rem 0.3rem rgba(13, 13, 13, 0.5);
   left: 46%;
   top: -1%;
 }
 #hero-container{
-  background-color: darkgrey;
+  background-color: var(--off-white);
 
   padding: 0.8rem;
   height: fit-content;
@@ -157,7 +158,8 @@ nav a:hover{
   left: 0.8rem;
 
   transform: rotate(5deg);
-  box-shadow: 0.625rem 0.45rem 0.8rem rgba(0,0,0,0.2);
+  box-shadow: 0.625rem 0.45rem 0.8rem rgba(0,0,0,0.2),
+        inset 0.625rem 0.45rem 0.8rem rgba(255, 255, 255, 0.5);
 }
 
 
@@ -180,7 +182,7 @@ nav a:hover{
 
 /* Testimonials Section (2) */
 .testimonials{
-  background-color: lightgray;
+  background-color: var(--background-accent-2);
   width: 100%;
   overflow: hidden;
   margin: 4rem 0;
@@ -189,14 +191,14 @@ nav a:hover{
 .track{
   width: max-content;
   display: flex;
-  animation: scroll 40s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 .testimonials:hover .track {
   animation-play-state: paused; 
 }
 
 .testimonial-card{
-  background-color: white;
+  background-color: var(--off-white);
   padding: 0.8rem;
   width: 20rem;
   margin: 1rem;
@@ -215,7 +217,7 @@ nav a:hover{
   margin-bottom: 0.5rem;
   margin-top: 0.8rem;
 }
-/* UNCOMMENT LATER
+/* UNCOMMENT LATER*/
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -224,7 +226,7 @@ nav a:hover{
     transform: translateX(-50%);
   }
 }
-*/
+
 
 /* Seasonal Picks Section (3) */
 .seasonal-picks{
@@ -298,7 +300,7 @@ nav a:hover{
 }
 .special-offer:hover{
   box-shadow: 0 5px 10px rgba(0,0,0,0.1),
-        inset 0 5px 8px rgba(255, 255, 255, 0.5);
+        inset 0 5px 8px rgba(249, 248, 247, 0.4);
   translate: 0 -5px;
 }
 .price-was{
