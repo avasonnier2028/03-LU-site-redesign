@@ -78,6 +78,10 @@ p{
 .grow-text{
   font-size: clamp(1.15rem, 2vw, 1.8rem);
 }
+.grow-text-small{
+  font-size: clamp(0.9rem, 1.8vw, 1.6rem);
+  font-style: italic;
+}
 
 /**** Header Section ****/
 
@@ -249,7 +253,6 @@ nav a:hover{
 .seasonal-picks .img-container{
   overflow: hidden;
   width: 50%;
-  min-width: 275px;
 }
 
 
@@ -261,6 +264,7 @@ nav a:hover{
 .specials-list{
   display: flex;
   justify-content: center;
+  margin: 0 2rem;
 }
 .special-offer img{
   width: 100%;
@@ -270,11 +274,18 @@ nav a:hover{
 .special-offer{
   position: relative;
   box-sizing: border-box;
-  width: 24rem;
+  min-width: 24rem;
+  flex: 1;
   padding: 1.5rem;
-  margin: 1.5rem;
+  margin: 0.5rem;
   border-radius: 10px;
   transition: all 0.4s ease;
+}
+.special-offer p{
+  font-size: clamp(1.15rem, 1.5vw, 1.5rem);
+}
+.special-offer h3{
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
 .special-offer h3::before{ /*line styling*/
   content: "";
@@ -347,7 +358,7 @@ footer {
 
 .footer-links h3{
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.5vw, 2.5rem);
 }
 .footer-links h3::after{ /*line styling*/
   content: "";
@@ -366,9 +377,9 @@ footer {
 .link-container a{
   text-align: left;
   color: var(--text-color-main);
-  font-size: 1.2rem;
+  font-size: clamp(1.2rem, 1.3vw, 2rem);
   text-decoration: none;
-  line-height: 2rem;
+  line-height: clamp(2rem, 2vw, 3rem);
 }
 .link-container a:hover{
   color: var(--text-color-accent-1);
@@ -378,13 +389,18 @@ footer {
   list-style-type: none; 
   padding: 0; 
   margin: 0;
-  min-width: 12.8rem;
 }
 
 .hours ul li{
   display: flex;
   justify-content: space-between;
-  line-height: 0.5rem;
+  line-height: clamp(2rem, 2vw, 3rem);
+}
+li p{
+  font-size: clamp(1.2rem, 1.3vw, 2rem);
+}
+.start{
+  margin-right: clamp(1rem, 2vw, 3rem);
 }
 
 .copyright{
@@ -393,5 +409,73 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+.copyright p{
+  font-size: clamp(1rem, 1.2vw, 1.8rem);
+}
 /* New Page: About Fran (3) */
 /* Accessibility Improvements (3) */
+
+@media only screen and (max-width: 425px){
+  nav{
+    justify-content: space-evenly;
+  }
+  nav a{
+    font-size: 1rem
+  }
+  .sticky-border{
+    top: 3.25rem;
+  }
+  .about-us{
+    display: block;
+    text-align: center;
+  }
+  .about-us h2{
+    margin-bottom: 1rem;
+  }
+
+  .seasonal-picks{
+    flex-direction: column;
+    position: relative;
+  }
+  .seasonal-content{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .seasonal-picks .img-container{
+   width: 80%;
+   position: absolute;
+   top: 10rem;
+  }
+  .seasonal-text{
+    margin-top: 120%;
+  }
+
+  .specials-list{
+    flex-direction:column;
+  }
+
+  .visit-us{
+    display: block;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 0;
+  }
+  .contact-info{
+    padding: 0;
+    margin: 0;
+  }
+
+  .link-container h3{
+    font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+  }
+  .hours ul li{
+    line-height: 1rem;
+  }
+  li p,
+  .link-container a{
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  }
+  .start{
+    margin-right: 0.5rem;
+  }
+}
