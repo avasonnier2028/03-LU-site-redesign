@@ -19,6 +19,13 @@ body {
   'GRAD' 0,
   'opsz' 240
 }
+
+.line-break{
+  background-color: lightgrey;
+  height: 1px;
+  width: 95vw;
+  margin: 5rem auto;
+}
 /**** Header Section ****/
 
 /* Navbar Section (2) */
@@ -121,8 +128,8 @@ body {
 
 /* Seasonal Picks Section (3) */
 .seasonal-picks{
-  border: 1px solid pink;
   margin: 2rem auto;
+  padding: 0 2rem;
   max-width: 80rem;
   height: 30rem;
   display: grid;
@@ -130,6 +137,7 @@ body {
   gap: 4%;
   overflow: hidden;
 }
+
 
 .seasonal-content{
   text-align: right;
@@ -158,6 +166,11 @@ body {
 
 
 /* Specials Section */
+
+.specials-list{
+  display: flex;
+  justify-content: space-around;
+}
 
 /* Visit Us Section */
 
